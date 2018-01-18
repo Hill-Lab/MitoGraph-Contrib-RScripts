@@ -1,5 +1,5 @@
 
-# First add a column "output-summary.csv" labeled with "Condition" and filled in with values for conditions tested
+# First add a column, in the second column position, to "output-summary.csv" labeled with "Condition" and filled in with values for conditions tested
 #
 # Set working directory to source file location (session -> set working directory -> to source file location)
 # 
