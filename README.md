@@ -6,7 +6,7 @@ R scripts created to assist you to analyze and plot the data produced by MitoGra
 
 ## How to run
 
-Run the script `CreateSummary.R` in R. Next add a column called _Condition_ in the file `output-summary.csv` and fill with the corresponding cell condition. Finaly run the code `CreatePlots.R`.
+Run the script `CreateSummary.R` in R. Next add a column called _Condition_ in the file `output-summary.csv` and fill with the corresponding cell condition. Make sure to add this column in the 2nd column position. Finaly run the code `CreatePlots.R`.
 
 ## Examples
 
