@@ -10,7 +10,7 @@ Before running our scripts, make sure you have the R packages __igraph__, __ggpl
 
 1. Open R, go to `File -> Source File` and select `CreateSummary.R`. R will ask for the folder where the `.gnet` files produced by MitoGraph are stored.
 
-2. Add a column called _Condition_ in the file `output-summary.csv` and fill with the corresponding cell condition.
+2. Add a column called _Condition_ in the file `output-summary.csv` created in the previous step and fill with the corresponding cell condition.
 
 3. Run the code `CreatePlots.R`. R will ask again for the folder where the `.gnet` files produced by MitoGraph are stored.
 
