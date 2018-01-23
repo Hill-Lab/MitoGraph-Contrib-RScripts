@@ -16,7 +16,7 @@ To execute MitoGraph on our test dataset, type the following command in the term
 
 ```
 cd ~/Desktop/MitoGraph
-./MitoGraph -xy ?? -z ?? -path ~/Desktop/MitoGraph-Contrib-RScripts-1.0/samples
+./MitoGraph xy 0.1667 -z 0.2 -scales 1.0 1.3 4 -adaptive 10 -path ~/Desktop/MitoGraph-Contrib-RScripts-1.0/samples
 ```
 
 ## How to use our scripts
