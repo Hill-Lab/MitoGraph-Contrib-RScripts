@@ -2,7 +2,9 @@
 
 Here we provide an example dataset of mammalian cells and R scripts created to assist you to analyze and plot the data produced by <a href="https://github.com/vianamp/MitoGraph">MitoGraph</a>. Example of plot:
 
-<img src="doc/All_metrics.png" width="auto" height="512" title="All metrics">
+<p align="center">
+  <img src="doc/All_metrics.png" width="auto" height="512" title="All metrics">
+</p>
 
 ## Download
 
