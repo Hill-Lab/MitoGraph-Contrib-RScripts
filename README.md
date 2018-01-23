@@ -16,7 +16,7 @@ To execute MitoGraph type the following command in the terminal of your Mac OS (
 
 ```
 cd ~/Desktop/MitoGraph
-./MitoGraph -xy 0.056 -z 0.2 -path ~/Desktop/MitoGraphTools-1.0
+./MitoGraph -xy ?? -z ?? -path ~/Desktop/MitoGraph-Contrib-RScripts-1.0/samples
 ```
 
 ## How to use our scripts
