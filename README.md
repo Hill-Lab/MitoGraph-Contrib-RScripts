@@ -1,12 +1,16 @@
 # MitoGraph-Contrib-RScripts
 
-R scripts created to assist you to analyze and plot the data produced by MitoGraph [1]. Example of plot:
+Here we provide an example dataset of mammalian cells and R scripts created to assist you to analyze and plot the data produced by <a href="https://github.com/vianamp/MitoGraph">MitoGraph</a>. Example of plot:
 
 <img src="doc/All_metrics.png" width="auto" height="512" title="All metrics">
 
+## Download
+
+<a href="https://github.com/vianamp/MitoGraphTools/archive/v1.0.zip">Click here to download our example dataset and R scripts</a>. We recommend you to unzip the file in your Desktop.
+
 ## How to run
 
-Before running our scripts, make sure you have the R packages __igraph__, __ggplot2__, __reshape2__, __formattable__ and __RColorBrewer__ installed.
+Before running our scripts, make sure you have __R__ or __R Studio__ installed in your system as well as the packages __igraph__, __ggplot2__, __reshape2__, __formattable__ and __RColorBrewer__ installed.
 
 1. If you are using _R_, go to `File -> Source File` and select `CreateSummary.R`. If you are using __R Studio__, open the file `CreateSummary.R` and hit Shift + ⌘ + S.
 
@@ -18,8 +22,4 @@ Before running our scripts, make sure you have the R packages __igraph__, __ggpl
 
 5. The script will ask for folder where the `.gnet` files produced by MitoGraph are stored. Type the folder and hit return.
 
-## Examples
 
-[1] - MitoGraph: https://github.com/vianamp/MitoGraph
-
-[2] - Our paper
