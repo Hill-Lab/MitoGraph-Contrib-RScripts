@@ -12,7 +12,7 @@ Here we provide an example dataset of mammalian cells and R scripts created to a
 
 ## How to Run MitoGraph on the example dataset
 
-To execute MitoGraph type the following command in the terminal of your Mac OS (spotlight + terminal):
+To execute MitoGraph on our test dataset, type the following command in the terminal of your Mac OS (spotlight + terminal):
 
 ```
 cd ~/Desktop/MitoGraph
