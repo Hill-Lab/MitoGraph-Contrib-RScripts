@@ -8,7 +8,16 @@ Here we provide an example dataset of mammalian cells and R scripts created to a
 
 <a href="https://github.com/vianamp/MitoGraphTools/archive/v1.0.zip">Click here to download our example dataset and R scripts</a>. We recommend you to unzip the file in your Desktop.
 
-## How to run
+## How to Run MitoGraph on the example dataset
+
+To execute MitoGraph type the following command in the terminal of your Mac OS (spotlight + terminal):
+
+```
+cd ~/Desktop/MitoGraph
+./MitoGraph -xy 0.056 -z 0.2 -path ~/Desktop/MitoGraphTools-1.0
+```
+
+## How to use our scripts
 
 Before running our scripts, make sure you have __R__ or __R Studio__ installed in your system as well as the packages __igraph__, __ggplot2__, __reshape2__, __formattable__ and __RColorBrewer__ installed.
 
