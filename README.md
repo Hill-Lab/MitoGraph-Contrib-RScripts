@@ -35,5 +35,15 @@ Before running our scripts, make sure you have __R__ or __R Studio__ installed i
 
 ## Output files
 
-Missing brief description here
+* output.csv
+* output-summary.csv
+* Plot1.eps
+* Plot3.eps
+* Plot5.eps
+* Plot7.eps
+* AVG_SD_metrics.eps
+* All_metrics.eps
+* MitoGraph_Connectivity_score.eps
+* AOV_stats_new.csv
+
 
