@@ -27,6 +27,10 @@ Before running our scripts, make sure you have __R__ or __R Studio__ installed i
 
 2. The script will ask for folder where the `.gnet` files produced by MitoGraph are stored. Type `~/Desktop/MitoGraph-Contrib-RScripts-1.0/samples` hit return.
 
+## Output files
+
+Missing brief description here
+
 3. Add a column called _Condition_ in the file `output-summary.csv` created in the previous step and fill with the corresponding cell condition.
 
 4. If you are using _R_, go to `File -> Source File` and select `CreatePlots.R`. If you are using __R Studio__, open the file `CreatePlots.R` and hit Shift + ⌘ + S.
