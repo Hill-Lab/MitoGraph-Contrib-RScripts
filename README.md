@@ -55,6 +55,6 @@ CreatePlots.R output files:
 * MitoGraph_Connectivity_score.eps 
     Box plot + Scatter overlay plot of the MitoGraph Connectivity Score
 * AOV_stats_new.csv 
-    Table of p-values
+    Table of p-values 
 
 
