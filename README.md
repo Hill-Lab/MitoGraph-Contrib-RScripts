@@ -35,26 +35,26 @@ Before running our scripts, make sure you have __R__ or __R Studio__ installed i
 
 ## Output files
 
-CreateSummary.R output files: 
+## CreateSummary.R output files: 
 * output.csv
 * output-summary.csv
 
-CreatePlots.R output files:
-* Plot1.eps 
+## CreatePlots.R output files:
+* Plot1.eps: 
     Avg edge length vs. Total Connected Components (normalized to total length (µm))
-* Plot3.eps 
+* Plot3.eps: 
     Total edge # (normalized to total length (µm)) vs. Average Degree
-* Plot5.eps 
+* Plot5.eps: 
     Total connected components (normalized to total length (µm) vs. PHI
-* Plot7.eps 
+* Plot7.eps: 
     Avg mitochondrial width (µm) vs Volume from voxels (µm^3)
-* AVG_SD_metrics.eps 
+* AVG_SD_metrics.eps: 
     Bar chart of all metrics collected (Avg±STDEV)
-* All_metrics.eps 
+* All_metrics.eps: 
     Box plot + Scatter overlay plot of all metrics collected 
-* MitoGraph_Connectivity_score.eps 
+* MitoGraph_Connectivity_score.eps: 
     Box plot + Scatter overlay plot of the MitoGraph Connectivity Score
-* AOV_stats_new.csv 
+* AOV_stats_new.csv: 
     Table of p-values 
 
 
