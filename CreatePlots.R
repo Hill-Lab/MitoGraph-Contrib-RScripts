@@ -76,7 +76,7 @@ for (p in seq(1,length(PlotsToBeMade),2)) {
                    8,0.005)
 
   
-  plot(ggplot(data=Summary_AVG_STD,aes_string(x=feature1, y=feature2, color="Condition")) + geom_point(size=5) +
+  fig <- plot(ggplot(data=Summary_AVG_STD,aes_string(x=feature1, y=feature2, color="Condition")) + geom_point(size=5) +
     geom_errorbar(aes_string(ymin=dy_min, ymax=dy_max), width=error[p], show.legend=FALSE) +
     geom_errorbarh(aes_string(xmin=dx_min, xmax=dx_max), height=error[p+1], show.legend=FALSE) +
     #geom_point(data=Summary,aes_string(x=feature1, y=feature2, color="Condition")) + geom_point(size=2) + # comment out this line to remove individual points
@@ -102,6 +102,7 @@ for (p in seq(1,length(PlotsToBeMade),2)) {
       # ylim(AxisMinimum[p+1], AxisMaximum[p+1])
       )
   
+    #print(fig)
     ggsave(paste(GnetsFolder,"/Plot-",p,".eps",sep=""), width = 14, height = 16, units = "cm", dpi = 300)
 
 }
@@ -121,7 +122,7 @@ Vars <- which(!is.na(match(Summary_AVG_STD_long$variable,VarNames)))
 
 Summary_AVG_STD_long <- Summary_AVG_STD_long[Vars,]
 
-ggplot(Summary_AVG_STD_long, aes(fill = Condition, x = variable, y = value)) +
+fig <- ggplot(Summary_AVG_STD_long, aes(fill = Condition, x = variable, y = value)) +
   geom_col(position = position_dodge (width = 0.9)) +
   scale_fill_manual(values = getPalette(nc)) +
   geom_errorbar(aes(ymin=value-value_sd, ymax=value+value_sd), position=position_dodge(width = 0.9), width=0.5, color="grey30", size=0.5, show.legend=FALSE) +
@@ -149,6 +150,7 @@ ggplot(Summary_AVG_STD_long, aes(fill = Condition, x = variable, y = value)) +
         legend.text = element_text(size = 12, color = "black")
   )
 
+print(fig)
 ggsave(paste(GnetsFolder,"/AVG_SD_metrics.eps",sep=""), width = 18, height = 16, units = "cm", dpi = 300)
 
 #
@@ -161,7 +163,7 @@ Vars <- which(!is.na(match(Summary_long$variable,VarNames)))
 
 Summary_long <- Summary_long[Vars,]
 
-ggplot(Summary_long, aes(fill=Condition, x=variable, y=value)) +
+fig <- ggplot(Summary_long, aes(fill=Condition, x=variable, y=value)) +
   stat_boxplot(geom = "errorbar", colour = "grey15", width = 0.5, position = position_dodge (width = 1)) +
   geom_boxplot (outlier.size = 0, colour = "grey15", position = position_dodge (width = 1)) +
   scale_fill_manual(values = getPalette(nc)) +
@@ -193,9 +195,10 @@ ggplot(Summary_long, aes(fill=Condition, x=variable, y=value)) +
         legend.text = element_text(size = 8, color = "black")
   )
 
+print(fig)
 ggsave(paste(GnetsFolder,"/All_metrics.eps",sep=""), width = 20, height = 16, units = "cm", dpi = 300)
 
-ggplot(Summary, aes(fill = Condition, x = Condition, y = MitoGraph_Connectivity_Score)) +
+fig <- ggplot(Summary, aes(fill = Condition, x = Condition, y = MitoGraph_Connectivity_Score)) +
   stat_boxplot(geom = "errorbar", width = 0.5, colour = "grey15") +  
   geom_boxplot(colour = "grey15") +
   scale_fill_manual(values = getPalette(nc)) +
@@ -219,6 +222,7 @@ ggplot(Summary, aes(fill = Condition, x = Condition, y = MitoGraph_Connectivity_
         legend.text = element_text(size = 12, color = "black")
   )
 
+print(fig)
 ggsave(paste(GnetsFolder,"/MitoGraph_Connectivity_score.eps",sep=""), width = 20, height = 16, units = "cm",
        dpi = 300)
 
@@ -238,6 +242,6 @@ if (length(levels(Summary$Condition)) > 1) {
   
   head(AOV_Stats_New)
   write.csv(AOV_Stats_New, paste(GnetsFolder,"/AOV_stats_new.csv",sep=""))
-  formattable(AOV_Stats_New, p.value=formatter("span", style = x~style(color=ifelse(x < 0.05 , "green", "black"))))
-
+  ftable <- formattable(AOV_Stats_New, p.value=formatter("span", style = x~style(color=ifelse(x < 0.05 , "green", "black"))))
+  print(ftable)
 }
