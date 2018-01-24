@@ -40,8 +40,7 @@ __CreateSummary.R output files:__
 * output-summary.csv
 
 __CreatePlots.R output files:__
-* Plot1.eps: 
-    Avg edge length vs. Total Connected Components (normalized to total length (µm))
+* Plot1.eps:                                                                                                                                              Avg edge length vs. Total Connected Components (normalized to total length (µm))
 * Plot3.eps: 
     Total edge # (normalized to total length (µm)) vs. Average Degree
 * Plot5.eps: 
