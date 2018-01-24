@@ -35,11 +35,11 @@ Before running our scripts, make sure you have __R__ or __R Studio__ installed i
 
 ## Output files
 
-## CreateSummary.R output files: 
+__CreateSummary.R output files: 
 * output.csv
 * output-summary.csv
 
-## CreatePlots.R output files:
+__CreatePlots.R output files:
 * Plot1.eps: 
     Avg edge length vs. Total Connected Components (normalized to total length (µm))
 * Plot3.eps: 
