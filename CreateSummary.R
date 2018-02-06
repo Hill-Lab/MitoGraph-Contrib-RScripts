@@ -1,12 +1,12 @@
 library(igraph)
 
 #
-# Specify the folder with the gnet files
-#
-# Save this script in the GNET folder you want to analyze
+# Save this script in the folder that contains the MitoGraph Gnet files you want to analyze
 # 
 # Set working directory to source file location (session -> set working directory -> to source file location)
 # 
+# Specify the folder with the gnet files (copy the working directory path to the GnetsFolder location below, ensure it ends in a /
+#
 # Run with Command+Option+r
 
 GnetsFolder <- "~/Dropbox/Analytical_Biochemistry_Method/R_scripts_sample_data/"
