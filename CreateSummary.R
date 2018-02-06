@@ -1,12 +1,15 @@
-#
-# Run with Command + Option + R
-#
-
-rm(list=ls())
-
 library(igraph)
 
-GnetsFolder <- readline(prompt="Folder containing .gnet files: ")
+#
+# Specify the folder with the gnet files
+#
+# Save this script in the GNET folder you want to analyze
+# 
+# Set working directory to source file location (session -> set working directory -> to source file location)
+# 
+# Run with Command+Option+r
+
+GnetsFolder <- "~/Dropbox/Analytical_Biochemistry_Method/R_scripts_sample_data/"
 
 RawData <- NULL
 Summary <- NULL
@@ -57,7 +60,7 @@ for (FileName in Gnets) {
   # Total Connected Components Normalized to Total Length
   TotalCCNorm = ConnectedComponents / TotalLength
   
-  # Display the degree distribution of the graph. I mean, the k-th element of the array
+  # Display the degree distirbution of the graph. I mean, the k-th element of the array
   # Pk gives the proportion of nodes with (k-1)-neighbours. Therefore, if you want the
   # proportion of free-ends in the graph, look at the 2nd element: Pk[2]. 
  
@@ -101,8 +104,8 @@ for (FileName in Gnets) {
   
 }
 
-Output <- paste(GnetsFolder,"/output.csv",sep='')
-OutputSummary <- paste(GnetsFolder,"/output-summary.csv",sep='')
+Output <- paste(GnetsFolder,"output.csv",sep='')
+OutputSummary <- paste(GnetsFolder,"output-summary.csv",sep='')
 
 write.csv(RawData,file=Output, row.names = FALSE)  
 write.csv(Summary,file=OutputSummary, row.names= FALSE)  
