@@ -29,7 +29,7 @@ Before running our scripts, make sure to install __R__ & __R Studio__ (https://w
 
 2. Open `CreateSummary.R` with R Studio. Set working directory to source file location (session -> set working directory -> to source file location)
 
-3. Copy the working directory location to the location in the script that specifies the Gnets Folder locations
+3. Copy the working directory path to the portion of the script that specifies the location of the Gnets files
 
 GnetsFolder <- "~/Desktop/MitoGraph-Contrib-RScripts-1.0/samples/"
 
@@ -39,7 +39,7 @@ GnetsFolder <- "~/Desktop/MitoGraph-Contrib-RScripts-1.0/samples/"
 
 6. Open `CreatePlots.R` with R Studio. Set working directory to source file location (session -> set working directory -> to source file location)
 
-7. Copy the working directory location to the location in the script that specifies the Gnets Folder locations
+7. Copy the working directory path to the portion of the script that specifies the location of the Gnets files
 
 GnetsFolder <- "~/Desktop/MitoGraph-Contrib-RScripts-1.0/samples/"
 
