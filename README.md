@@ -12,6 +12,8 @@ Here we provide an example dataset of mammalian cells and R scripts created to a
 
 ## How to Run MitoGraph on our example dataset
 
+First download program and follow the instructions for use of MitoGraph <a href="https://github.com/vianamp/MitoGraph">MitoGraph</a>
+
 To execute MitoGraph on our test dataset, type the following command in the terminal of your Mac OS (spotlight + terminal):
 
 ```
