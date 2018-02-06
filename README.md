@@ -27,19 +27,19 @@ Before running our scripts, make sure to install __R__ & __R Studio__ (https://w
 
 2. Open `CreateSummary.R` with R Studio. Set working directory to source file location (session -> set working directory -> to source file location)
 
-3. Copy the working directory location to specify the Gnets Folder locations
+3. Copy the working directory location to the location in the script that specifies the Gnets Folder locations
 
-GnetsFolder <-
+GnetsFolder <- "~/Desktop/MitoGraph-Contrib-RScripts-1.0/samples/"
 
 4. Run `CreateSummary.R` with "Command + Option + r"
 
-5. Add a column (in the second column position) called _Condition_ in the file `output-summary.csv` created in the previous step and fill with the corresponding cell condition.
+5. Add a column (in the second column position) called _Condition_ in the file `output-summary.csv` created in the previous step and fill in with the corresponding cell condition.
 
 6. Open `CreatePlots.R` with R Studio. Set working directory to source file location (session -> set working directory -> to source file location)
 
-7. Copy the working directory location to specify the Gnets Folder locations
+7. Copy the working directory location to the location in the script that specifies the Gnets Folder locations
 
-GnetsFolder <-
+GnetsFolder <- "~/Desktop/MitoGraph-Contrib-RScripts-1.0/samples/"
 
 8. Run `CreatePlots.R` with "Command + Option + r"
 
