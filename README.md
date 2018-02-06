@@ -23,30 +23,30 @@ cd ~/Desktop/MitoGraph
 
 ## How to use our scripts
 
-Before running our scripts, make sure to install:
+1. Before running our scripts, make sure to install:
 
 * __R__ as well as __R Studio__ (https://www.rstudio.com/products/rstudio/download/) 
 * R packages: __igraph__, __ggplot2__, __reshape2__, __formattable__ and __RColorBrewer__.
 
-1. Copy/save `CreateSummary.R` and `CreatePlots.R` to the folder containing the MitoGraph output files. 
+2. Copy/save `CreateSummary.R` and `CreatePlots.R` to the folder containing the MitoGraph output files. 
 
-2. Open `CreateSummary.R` with R Studio. Set working directory to source file location (session -> set working directory -> to source file location)
+3. Open `CreateSummary.R` with R Studio. Set working directory to source file location (session -> set working directory -> to source file location)
 
-3. Copy the working directory path to the portion of the script that specifies the location of the Gnets files
-
-GnetsFolder <- "~/Desktop/MitoGraph-Contrib-RScripts-1.0/samples/"
-
-4. Run `CreateSummary.R` with "Command + Option + r"
-
-5. Add a column (in the second column position) called _Condition_ in the file `output-summary.csv` created in the previous step and fill in with the corresponding cell condition.
-
-6. Open `CreatePlots.R` with R Studio. Set working directory to source file location (session -> set working directory -> to source file location)
-
-7. Copy the working directory path to the portion of the script that specifies the location of the Gnets files
+4. Copy the working directory path to the portion of the script that specifies the location of the Gnets files
 
 GnetsFolder <- "~/Desktop/MitoGraph-Contrib-RScripts-1.0/samples/"
 
-8. Run `CreatePlots.R` with "Command + Option + r"
+5. Run `CreateSummary.R` with "Command + Option + r"
+
+6. Add a column (in the second column position) called _Condition_ in the file `output-summary.csv` created in the previous step and fill in with the corresponding cell condition.
+
+7. Open `CreatePlots.R` with R Studio. Set working directory to source file location (session -> set working directory -> to source file location)
+
+8. Copy the working directory path to the portion of the script that specifies the location of the Gnets files
+
+GnetsFolder <- "~/Desktop/MitoGraph-Contrib-RScripts-1.0/samples/"
+
+9. Run `CreatePlots.R` with "Command + Option + r"
 
 ## Output files
 
