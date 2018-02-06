@@ -41,37 +41,57 @@ __CreateSummary.R output files:__
 
 __CreatePlots.R output files:__
 * Plot1.eps:
+    
     Avg edge length vs. Total Connected Components (normalized to total length (µm))
 * Plot3.eps: 
+    
     Total edge # (normalized to total length (µm)) vs. Average Degree
 * Plot5.eps: 
+    
     Total connected components (normalized to total length (µm) vs. PHI
 * Plot7.eps: 
+    
     Avg mitochondrial width (µm) vs Volume from voxels (µm^3)
 * AVG_SD_metrics.eps: 
+    
     Bar chart of all metrics collected (Avg±STDEV)
 * All_metrics.eps: 
+    
     Box plot + Scatter overlay plot of all metrics collected 
 * MitoGraph_Connectivity_score.eps: 
+    
     Box plot + Scatter overlay plot of the MitoGraph Connectivity Score
 * AOV_stats_new.csv: 
+    
     Table of p-values 
 
 ## References: 
+
 __R__
+
 R Core Team (2017). R: A language and environment for statistical computing. R Foundation for
   Statistical Computing, Vienna, Austria. URL https://www.R-project.org/.
+
 __igraph__
+
 Csardi G, Nepusz T: The igraph software package for complex network research, InterJournal, Complex
   Systems 1695. 2006. http://igraph.org
+
 __ggplot2__
+
 H. Wickham. ggplot2: Elegant Graphics for Data Analysis. Springer-Verlag New York, 2009.
+
 __reshape2__
+
 Hadley Wickham (2007). Reshaping Data with the reshape Package. Journal of Statistical Software,
   21(12), 1-20. URL http://www.jstatsoft.org/v21/i12/.
+
 __formattable__
+
 Kun Ren and Kenton Russell (2016). formattable: Create 'Formattable' Data Structures. R package
   version 0.2.0.1. https://CRAN.R-project.org/package=formattable
+
 __RColorBrewer__
+
 Erich Neuwirth (2014). RColorBrewer: ColorBrewer Palettes. R package version 1.1-2.
   https://CRAN.R-project.org/package=RColorBrewer
