@@ -8,7 +8,7 @@ Here we provide an example dataset of mammalian cells and R scripts created to a
 
 ## Download
 
-<a href="https://github.com/Hill-Lab/MitoGraph-Contrib-RScripts/archive/v1.0.zip">Click here to download our example dataset and R scripts</a>. We recommend you to unzip the file in your Desktop.
+<a href="https://github.com/Hill-Lab/MitoGraph-Contrib-RScripts/archive/v1.0.zip">Click here to download our example dataset and R scripts</a>. We recommend unzipping the file in your Desktop.
 
 ## How to Run MitoGraph on our example dataset
 
