@@ -1,9 +1,9 @@
 
-# First add a column, in the second column position, to "output-summary.csv" labeled with "Condition" and filled in with values for conditions tested
+# To the "output-summary.csv" file creasted by 'CreateSummary.R'. First add a column, in the second column position, labeled with "Condition" and fill in with values for conditions tested
 #
 # Set working directory to source file location (session -> set working directory -> to source file location)
 # 
-# Replace GnetsFolder with path where data is stored
+# Replace GnetsFolder with this working directory path where data is stored
 #
 # Run with Command+Option+r
 
@@ -226,9 +226,7 @@ ggsave(paste(GnetsFolder,"MitoGraph_Connectivity_score.eps",sep=""), width = 20,
 write.table(Summary_AVG_STD_long, file = paste(GnetsFolder,"Summary_AVG_STD.csv",sep=""), sep = ",", quote = FALSE, row.names = F)
 formattable(Summary_AVG_STD_long, row.names = F, list( " " = FALSE))
 
-# ########################
-# Alternative code for AOV
-# #########################
+#Analysis of Variance:
 
 AOV_Stats_New <- NULL
 for (var in seq(3,21,1)) {
@@ -243,38 +241,3 @@ formattable(AOV_Stats_New, p.value=formatter("span", style = x~style(color=ifels
 #
 # Not shown in color (fix it)
 #
-
-
-# ###############################
-# End of alternative code for AOV
-# ###############################
-
-# # John's aov() approach using tidyverse's dplyr and tidyr and broom package ----
-# library(tidyverse)
-# library(broom)
-# library(dplyr)
-# 
-# AOV_stats <- Summary %>% # perform ANOVA & post-hoc Tukey test for all groups
-#   gather(., "var", "value", 3:21) %>%
-#   group_by(., var) %>%
-#   do(tidy(TukeyHSD(aov(value ~ Condition, data = .))))
-# 
-# write_csv(AOV_stats, "AOV_stats.csv")
-# formattable(AOV_stats, list(term = FALSE, estimate = FALSE, conf.low = FALSE, conf.high = FALSE, 
-#                             adj.p.value = formatter("span", style = x ~ style(color = ifelse(x < 0.05 , "green", "red")))))
-
-# uncomment to gain information on residuals
-# AOV_residuals <- Summary %>% # obtain residuals and fitted values
-#   gather(., "var", "value", 3:21) %>% 
-#   group_by(., var) %>%
-#   do(augment(aov(value ~ Condition, data = .)))
-# write_csv(AOV_residuals, "AOV_residuals.csv")
-
-# uncomment to gain information on residuals
-# AOV_model <- Summary %>% # obtain information on model (R^2, adj. R^2, etc.)
-#   gather(., "var", "value", 3:21) %>% # it may be that we don't need this info
-#   group_by(., var) %>%
-#   do(glance(aov(value ~ Condition, data = .)))
-# write_csv(AOV_model, "AOV_model.csv")
-
-# end of John's ANOVA code ----
