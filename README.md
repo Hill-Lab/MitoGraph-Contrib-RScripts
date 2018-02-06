@@ -24,6 +24,7 @@ cd ~/Desktop/MitoGraph
 ## How to use our scripts
 
 Before running our scripts, make sure to install:
+
 *__R__ as well as __R Studio__ (https://www.rstudio.com/products/rstudio/download/) 
 * R packages: __igraph__, __ggplot2__, __reshape2__, __formattable__ and __RColorBrewer__.
 
