@@ -21,17 +21,27 @@ cd ~/Desktop/MitoGraph
 
 ## How to use our scripts
 
-Before running our scripts, make sure you have __R__ & __R Studio__ (https://www.rstudio.com/products/rstudio/download/) installed in your system as well as the packages __igraph__, __ggplot2__, __reshape2__, __formattable__ and __RColorBrewer__ installed.
+Before running our scripts, make sure to install __R__ & __R Studio__ (https://www.rstudio.com/products/rstudio/download/) as well as the packages __igraph__, __ggplot2__, __reshape2__, __formattable__ and __RColorBrewer__.
 
-1. If you are using _R_, go to `File -> Source File` and select `CreateSummary.R`. If you are using __R Studio__, open the file `CreateSummary.R` and hit Shift + ⌘ + S.
+1. Copy/save `CreateSummary.R` and `CreatePlots.R` to the folder containing the MitoGraph output files. 
 
-2. The script will ask for folder where the `.gnet` files produced by MitoGraph are stored. Type `~/Desktop/MitoGraph-Contrib-RScripts-1.0/samples/` hit return.
+2. Open `CreateSummary.R` with R Studio. Set working directory to source file location (session -> set working directory -> to source file location)
 
-3. Add a column called _Condition_ in the file `output-summary.csv` created in the previous step and fill with the corresponding cell condition.
+3. Copy the working directory location to specify the Gnets Folder locations
 
-4. If you are using _R_, go to `File -> Source File` and select `CreatePlots.R`. If you are using __R Studio__, open the file `CreatePlots.R` and hit Shift + ⌘ + S.
+GnetsFolder <-
 
-5. The script will ask for folder where the `.gnet` files produced by MitoGraph are stored. Type `~/Desktop/MitoGraph-Contrib-RScripts-1.0/samples/` and hit return.
+4. Run `CreateSummary.R` with "Command + Option + r"
+
+5. Add a column (in the second column position) called _Condition_ in the file `output-summary.csv` created in the previous step and fill with the corresponding cell condition.
+
+6. Open `CreatePlots.R` with R Studio. Set working directory to source file location (session -> set working directory -> to source file location)
+
+7. Copy the working directory location to specify the Gnets Folder locations
+
+GnetsFolder <-
+
+8. Run `CreatePlots.R` with "Command + Option + r"
 
 ## Output files
 
