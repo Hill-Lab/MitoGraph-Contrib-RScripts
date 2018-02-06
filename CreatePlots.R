@@ -1,5 +1,4 @@
-
-# To the "output-summary.csv" file creasted by 'CreateSummary.R'. First add a column, in the second column position, labeled with "Condition" and fill in with values for conditions tested
+# To the "output-summary.csv" file created by 'CreateSummary.R'. First add a column, in the second column position, labeled with "Condition" and fill in with values for conditions tested
 #
 # Set working directory to source file location (session -> set working directory -> to source file location)
 # 
@@ -17,7 +16,7 @@ library(RColorBrewer)
 transparent <- rgb(0, 0, 0, 0)
 
 # Replace with path specific for your data, make sure to include final "/" after the name
-GnetsFolder <- "~/Dropbox/Analytical_Biochemistry_Method/R_scripts_sample_data/" 
+GnetsFolder <- "~/Desktop/MitoGraph-Contrib-RScripts-1.0/samples/" 
 
 Summary <- read.csv(paste(GnetsFolder,"output-summary.csv",sep=""))
 
@@ -61,10 +60,10 @@ AxisLabels <- c("Total Connected Components\nNormalized to Total Length (um)","A
 #                  200,0.5)
 
 for (p in seq(1,length(PlotsToBeMade),2)) {
-
+  
   feature1 <- PlotsToBeMade[p+0]
   feature2 <- PlotsToBeMade[p+1]
-    
+  
   dx_min <- paste(feature1,"-",feature1,"_sd",sep="")
   dx_max <- paste(feature1,"+",feature1,"_sd",sep="")
   dy_min <- paste(feature2,"-",feature2,"_sd",sep="")
@@ -72,39 +71,39 @@ for (p in seq(1,length(PlotsToBeMade),2)) {
   
   # Adjust to modify error bar width
   error <- c(0.03,0.05,
-                   0.03,0.025,
-                   0.02,0.05,
-                   8,0.005)
-
+             0.03,0.025,
+             0.02,0.05,
+             8,0.005)
+  
   
   plot(ggplot(data=Summary_AVG_STD,aes_string(x=feature1, y=feature2, color="Condition")) + geom_point(size=5) +
-    geom_errorbar(aes_string(ymin=dy_min, ymax=dy_max), width=error[p], show.legend=FALSE) +
-    geom_errorbarh(aes_string(xmin=dx_min, xmax=dx_max), height=error[p+1], show.legend=FALSE) +
-    #geom_point(data=Summary,aes_string(x=feature1, y=feature2, color="Condition")) + geom_point(size=2) + # comment out this line to remove individual points
-    labs(x = feature1, y = feature2) +
-    scale_color_manual(values = getPalette(nc)) +
-    theme_bw() +
-    theme(axis.text = element_text(size = 12, color = "black"),
-          panel.grid.major = element_blank(),
-          panel.grid.minor = element_blank(),
-          panel.border = element_blank(),
-          panel.background = element_blank(),
-          axis.line.x = element_line(color = "black", size = 0.5, linetype = 1), 
-          axis.line.y = element_line(color = "black", size = 0.5, linetype = 1), 
-          legend.title = element_blank(),
-          legend.justification = c(0, 1), 
-          legend.position = c(.75, 1),
-          legend.text = element_text(size = 12, color = "black")
-    ) + 
-      xlab(AxisLabels[p]) +
-      ylab(AxisLabels[p+1]) 
-      # Add a "+" above and uncomment the below 2 lines to add custom axis scales. 
-      # xlim(AxisMinimum[p], AxisMaximum[p]) + 
-      # ylim(AxisMinimum[p+1], AxisMaximum[p+1])
-      )
+         geom_errorbar(aes_string(ymin=dy_min, ymax=dy_max), width=error[p], show.legend=FALSE) +
+         geom_errorbarh(aes_string(xmin=dx_min, xmax=dx_max), height=error[p+1], show.legend=FALSE) +
+         #geom_point(data=Summary,aes_string(x=feature1, y=feature2, color="Condition")) + geom_point(size=2) + # comment out this line to remove individual points
+         labs(x = feature1, y = feature2) +
+         scale_color_manual(values = getPalette(nc)) +
+         theme_bw() +
+         theme(axis.text = element_text(size = 12, color = "black"),
+               panel.grid.major = element_blank(),
+               panel.grid.minor = element_blank(),
+               panel.border = element_blank(),
+               panel.background = element_blank(),
+               axis.line.x = element_line(color = "black", size = 0.5, linetype = 1), 
+               axis.line.y = element_line(color = "black", size = 0.5, linetype = 1), 
+               legend.title = element_blank(),
+               legend.justification = c(0, 1), 
+               legend.position = c(.75, 1),
+               legend.text = element_text(size = 12, color = "black")
+         ) + 
+         xlab(AxisLabels[p]) +
+         ylab(AxisLabels[p+1]) 
+       # Add a "+" above and uncomment the below 2 lines to add custom axis scales. 
+       # xlim(AxisMinimum[p], AxisMaximum[p]) + 
+       # ylim(AxisMinimum[p+1], AxisMaximum[p+1])
+  )
   
-    ggsave(paste(GnetsFolder,"Plot-",p,".eps",sep=""), width = 14, height = 16, units = "cm", dpi = 300)
-
+  ggsave(paste(GnetsFolder,"Plot-",p,".eps",sep=""), width = 14, height = 16, units = "cm", dpi = 300)
+  
 }
 
 #
@@ -237,7 +236,7 @@ for (var in seq(3,21,1)) {
 
 head(AOV_Stats_New)
 write.csv(AOV_Stats_New, paste(GnetsFolder,"AOV_stats_new.csv",sep=""))
-formattable(AOV_Stats_New, p.value=formatter("span", style = x~style(color=ifelse(x < 0.05 , "green", "black"))))
-#
-# Not shown in color (fix it)
-#
+#Adjust the following for color coded signficance: Green = p < 0.05 & Red = p > 0.05
+sign_formatter <- sign_formatter <- formatter("span", style = x ~ style(color = ifelse(x > 0.05, "red", ifelse(x < 0.05, "green", "black"))))
+sign_formatter(c(-1, 0, 1))
+formattable(AOV_Stats_New, list(p.value = sign_formatter))
