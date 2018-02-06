@@ -21,7 +21,7 @@ cd ~/Desktop/MitoGraph
 
 ## How to use our scripts
 
-Before running our scripts, make sure you have __R__ or __R Studio__ installed in your system as well as the packages __igraph__, __ggplot2__, __reshape2__, __formattable__ and __RColorBrewer__ installed.
+Before running our scripts, make sure you have __R__ & __R Studio__ (https://www.rstudio.com/products/rstudio/download/) installed in your system as well as the packages __igraph__, __ggplot2__, __reshape2__, __formattable__ and __RColorBrewer__ installed.
 
 1. If you are using _R_, go to `File -> Source File` and select `CreateSummary.R`. If you are using __R Studio__, open the file `CreateSummary.R` and hit Shift + ⌘ + S.
 
