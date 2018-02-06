@@ -23,7 +23,7 @@ cd ~/Desktop/MitoGraph
 
 ## How to use our scripts
 
-Before running our scripts, make sure to install __R__ & __R Studio__ (https://www.rstudio.com/products/rstudio/download/) as well as the packages __igraph__, __ggplot2__, __reshape2__, __formattable__ and __RColorBrewer__.
+Before running our scripts, make sure to install __R__ as well as __R Studio__ (https://www.rstudio.com/products/rstudio/download/) as well as the packages __igraph__, __ggplot2__, __reshape2__, __formattable__ and __RColorBrewer__.
 
 1. Copy/save `CreateSummary.R` and `CreatePlots.R` to the folder containing the MitoGraph output files. 
 
