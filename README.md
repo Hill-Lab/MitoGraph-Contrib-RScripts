@@ -12,7 +12,7 @@ Here we provide an example dataset of mammalian cells and R scripts created to a
 
 ## How to Run MitoGraph on our example dataset
 
-First download program and follow the instructions for use of MitoGraph <a href="https://github.com/vianamp/MitoGraph">MitoGraph</a>
+First download the program and follow the instructions for use of <a href="https://github.com/vianamp/MitoGraph">MitoGraph</a>
 
 To execute MitoGraph on our test dataset, type the following command in the terminal of your Mac OS (spotlight + terminal):
 
@@ -69,6 +69,10 @@ __CreatePlots.R output files:__
 * AOV_stats_new.csv: Table of p-values 
 
 ## References: 
+
+__MitoGraph:__ Matheus P Viana, Swee Lim, Susanne M Rafelski, Quantifying Mitochondrial Content in Living Cells (2015), Biophysical Methods in Cell Biology, (125) - 77-93 (http://www.sciencedirect.com/science/article/pii/S0091679X14000041)
+
+__MitoGraph on mammalian cells:__ Megan C. Harwig, Matheus P. Viana, John M. Egner, Jason J. Harwig, Michael E. Widlansky, Susanne M. Rafelski, R. Blake Hill, Methods for imaging mammalian mitochondrial morphology: a prospective on MitoGraph (in revision) 
 
 __R:__ R Core Team (2017). R: A language and environment for statistical computing. R Foundation for
   Statistical Computing, Vienna, Austria. URL https://www.R-project.org/.
