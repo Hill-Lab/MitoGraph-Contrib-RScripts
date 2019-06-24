@@ -75,7 +75,7 @@ __CreatePlots.R output files:__
 
 __MitoGraph:__ Matheus P Viana, Swee Lim, Susanne M Rafelski, Quantifying Mitochondrial Content in Living Cells (2015), Biophysical Methods in Cell Biology, (125) - 77-93 (http://www.sciencedirect.com/science/article/pii/S0091679X14000041)
 
-__MitoGraph on mammalian cells:__ Megan C. Harwig, Matheus P. Viana, John M. Egner, Jason J. Harwig, Michael E. Widlansky, Susanne M. Rafelski, R. Blake Hill, Methods for imaging mammalian mitochondrial morphology: a prospective on MitoGraph (in revision) 
+__MitoGraph on mammalian cells:__ Megan C. Harwig, Matheus P. Viana, John M. Egner, Jason J. Harwig, Michael E. Widlansky, Susanne M. Rafelski, R. Blake Hill, Methods for imaging mammalian mitochondrial morphology: a prospective on MitoGraph (2018), Analytical Biochemistry, (552) - 81-99 [https://doi.org/10.1016/j.ab.2018.02.022](https://doi.org/10.1016/j.ab.2018.02.022)
 
 __R:__ R Core Team (2017). R: A language and environment for statistical computing. R Foundation for
   Statistical Computing, Vienna, Austria. URL https://www.R-project.org/.
